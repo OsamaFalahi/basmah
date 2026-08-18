@@ -98,7 +98,7 @@
   .btn-outline{background:transparent; color:var(--ink); border:1.5px solid var(--ink);}
   .btn-outline:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px);}
   .btn-outline.on-dark{color:#F8F4EA; border-color:rgba(248,244,234,.5);}
-  .btn-outline.on-dark:hover{background:#F8F4EA; color:var(--ink);}
+  .btn-outline.on-dark:hover{background:#F8F4EA; color:#1B1815;}
   .btn-ghost{background:rgba(255,255,255,.05); color:var(--ink); font-weight:600;}
   .btn-ghost:hover{background:rgba(255,255,255,.1);}
   .btn-whatsapp{background:#3C7A5B; color:#fff;}
@@ -123,14 +123,15 @@
     position:sticky; top:0; z-index:60;
     height:var(--header-h);
     display:flex; align-items:center;
-    background:rgba(246,241,231,.86);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line-soft);
-    transition:box-shadow .25s ease, background .25s ease;
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:all .35s ease;
   }
-  .site-header.scrolled{box-shadow:0 8px 24px -16px rgba(0,0,0,.4); background:rgba(0,0,0,.97);}
+  .site-header.scrolled{background:rgba(245,235,220,.92); backdrop-filter:blur(14px); border-bottom-color:rgba(141,101,57,.25); box-shadow:0 4px 20px -8px rgba(0,0,0,.2);}
   .header-inner{display:flex; align-items:center; justify-content:space-between; gap:20px; width:100%;}
-  .logo{display:flex; align-items:center; gap:10px; font-family:'Noto Kufi Arabic'; font-weight:900; font-size:20px;}
+  .logo{display:flex; align-items:center; gap:10px; font-family:'Noto Kufi Arabic'; font-weight:900; font-size:20px; color:#f5f0e8; transition:color .35s ease;}
+  .site-header.scrolled .logo{color:#1B1815;}
   .logo-mark{width:36px; height:36px; border-radius:9px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2px; padding:4px; background:var(--bg-dark);}
   .logo-mark span{border-radius:2px;}
   .logo-mark span:nth-child(1){background:#f5ce91;}
@@ -139,19 +140,23 @@
   .logo-mark span:nth-child(4){background:var(--clay);}
 
   .main-nav{display:flex; align-items:center; gap:30px;}
-  .main-nav a{font-size:15px; font-weight:600; position:relative; padding:6px 0;}
+  .main-nav a{font-size:15px; font-weight:600; position:relative; padding:6px 0; color:#f5f0e8;}
   .main-nav a::after{content:""; position:absolute; right:0; bottom:0; height:2px; width:0; background:#f5ce91; transition:width .25s ease;}
   .main-nav a:hover::after{width:100%;}
+  .site-header.scrolled .main-nav a{color:#1B1815;}
+  .site-header.scrolled .main-nav a::after{background:#8d6539;}
 
   .header-actions{display:flex; align-items:center; gap:10px;}
   .icon-btn{
     width:42px; height:42px; border-radius:50%;
     display:flex; align-items:center; justify-content:center;
     color:#f5f0e8; background:rgba(255,255,255,.06);
-    transition:background .2s ease, transform .2s ease;
+    transition:background .2s ease, transform .2s ease, color .35s ease, background .35s ease;
     position:relative;
   }
   .icon-btn:hover{background:rgba(255,255,255,.12); transform:translateY(-1px);}
+  .site-header.scrolled .icon-btn{color:#1B1815; background:rgba(141,101,57,.12);}
+  .site-header.scrolled .icon-btn:hover{background:rgba(141,101,57,.2);}
   .icon-btn svg{width:19px; height:19px;}
   .badge{
     position:absolute; top:-3px; left:-3px; background:var(--clay); color:#fff;
@@ -160,10 +165,12 @@
   }
   .phone-pill{
     display:flex; align-items:center; gap:8px;
-    background:var(--bg-dark); color:var(--paper);
+    background:var(--bg-dark); color:#f5f0e8;
     padding:9px 16px 9px 12px; border-radius:999px;
     font-weight:700; font-size:14.5px; direction:ltr;
+    transition:background .35s ease, color .35s ease;
   }
+  .site-header.scrolled .phone-pill{background:#fff; color:#1B1815;}
   .phone-pill svg{width:16px; height:16px; color:#f5ce91;}
   .burger{display:none; width:42px; height:42px; border-radius:10px; background:rgba(255,255,255,.06); align-items:center; justify-content:center;}
   .burger svg{width:20px; height:20px;}
@@ -267,7 +274,7 @@
     background:var(--card); border:1px solid var(--line); color:var(--ink-soft);
     transition:all .2s ease;
   }
-  .tab-btn.active{background:var(--bg-dark); color:var(--paper); border-color:var(--bg-dark);}
+  .tab-btn.active{background:var(--bg-dark); color:#f5f0e8; border-color:var(--bg-dark);}
   .prod-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
   .prod-panel{display:none;}
   .prod-panel.active{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
@@ -281,7 +288,7 @@
   .prod-body h4{font-size:15.5px; margin:6px 0 10px; font-weight:700; font-family:'IBM Plex Sans Arabic';}
   .prod-foot{display:flex; align-items:center; justify-content:space-between;}
   .prod-price{font-family:'Noto Kufi Arabic'; font-weight:800; font-size:16px;}
-  .prod-add{width:36px; height:36px; border-radius:50%; background:var(--bg-dark); color:var(--paper); display:flex; align-items:center; justify-content:center; transition:background .2s ease;}
+  .prod-add{width:36px; height:36px; border-radius:50%; background:var(--bg-dark); color:#f5f0e8; display:flex; align-items:center; justify-content:center; transition:background .2s ease;}
   .prod-add:hover{background:#f5ce91;}
   .prod-add svg{width:16px; height:16px;}
   .products-more{text-align:center; margin-top:40px;}
@@ -473,16 +480,16 @@
   <div class="container header-inner">
     <div style="display:flex; align-items:center; gap:36px;">
       <a href="#top" class="logo">
-        <span class="logo-mark"><span></span><span></span><span></span><span></span></span>
-        بصمة عامة
+        <img src="logo (1).png" alt="بصمة عامة" style="height:40px; width:auto;">
       </a>
       <nav class="main-nav">
-        <a href="#categories">الأقسام</a>
-        <a href="#portfolio">أعمالنا</a>
-        <a href="#products">المنتجات</a>
-        <a href="#rep">اطلب مندوب</a>
-        <a href="#testimonials">آراء العملاء</a>
-        <a href="#blog">المدونة</a>
+        <a href="#top">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#products">المنتجات ^</a>
+        <a href="#categories">جميع الأقسام</a>
+        <a href="#faq">التعليمات</a>
+        <a href="#contact">أتصال</a>
+        <a href="#blog">مدونة</a>
       </nav>
     </div>
     <div class="header-actions">
@@ -515,15 +522,16 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
     <a class="logo" href="#top" style="font-size:19px;">
-      <span class="logo-mark"><span></span><span></span><span></span><span></span></span> بصمة عامة
+      <img src="logo (1).png" alt="بصمة عامة" style="height:36px; width:auto;">
     </a>
     <div class="drawer-links">
-      <a href="#categories">الأقسام</a>
-      <a href="#portfolio">أعمالنا</a>
-      <a href="#products">المنتجات</a>
-      <a href="#rep">اطلب مندوب</a>
-      <a href="#testimonials">آراء العملاء</a>
-      <a href="#blog">المدونة</a>
+      <a href="#top">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#products">المنتجات ^</a>
+      <a href="#categories">جميع الأقسام</a>
+      <a href="#faq">التعليمات</a>
+      <a href="#contact">أتصال</a>
+      <a href="#blog">مدونة</a>
     </div>
     <div class="drawer-cta">
       <a class="btn btn-primary btn-block" href="#rep">اطلب مندوب مبيعات</a>
@@ -929,24 +937,24 @@
     </div>
     <div class="serv-grid">
       <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-        <h4>الهوية البصرية</h4><p>تصاميم فريدة تترك أثراً</p>
-      </div>
-      <div class="serv-card" data-reveal>
         <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg></div>
-        <h4>التصميم الداخلي</h4><p>هندسة المساحات الفاخرة</p>
+        <h4>تركيب باركيه وأرضيات خشبية</h4><p>تركيب احترافي لجميع أنواع الباركيه والأرضيات الخشبية</p>
       </div>
       <div class="serv-card" data-reveal>
         <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h4>تطوير الويب</h4><p>برمجة متكاملة ومقاومة للأخطاء</p>
+        <h4>ديكورات جدارية وورق جدران</h4><p>تصاميم عصرية وكلاسيكية لجميع الغرف</p>
       </div>
       <div class="serv-card" data-reveal>
         <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h4>الاستشارات الفنية</h4><p>توجيه احترافي متكامل لمشروعك</p>
+        <h4>أرضيات سيراميك وبلاط</h4><p>توريد وتركيب سيراميك وبلاط بأعلى معايير الجودة</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h4>عزل وطبقات أرضية</h4><p>حلول عزل كاملة لحماية الأرضيات من الرطوبة</p>
       </div>
       <div class="serv-card" data-reveal>
         <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <h4>إدارة المحتوى</h4><p>تنسيق وهيكلة وتوثيق قياسي</p>
+        <h4>صيانة وتنظيف الأرضيات</h4><p>خدمات صيانة دورية وتنظيف احترافي للأرضيات</p>
       </div>
     </div>
   </div>
@@ -1004,7 +1012,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="logo"><span class="logo-mark"><span></span><span></span><span></span><span></span></span> بصمة عامة</a>
+        <a href="#top" class="logo"><img src="logo (1).png" alt="بصمة عامة" style="height:40px; width:auto;"></a>
         <p>نقدّم حلولاً متكاملة للأرضيات والديكورات والتشطيبات بلمسة فنية فاخرة، لأصحاب المشاريع والمقاولين والمستشارين وعملاء التجزئة.</p>
         <ul class="footer-contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> السعودية — جدة — حي الفيصلية</li>
