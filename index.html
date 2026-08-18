@@ -215,21 +215,77 @@
 
 
 
-  /* ---------- segmentation ---------- */
-  .seg-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-  .seg-card{
+  /* ---------- customers / who we serve section ---------- */
+  .cust-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .cust-card{
     background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg);
     padding:28px 24px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     position:relative; overflow:hidden;
   }
-  .seg-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:transparent;}
-  .seg-icon{width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
-  .seg-icon svg{width:24px; height:24px; color:#fff;}
-  .seg-card h3{font-size:18.5px; margin-bottom:8px;}
-  .seg-card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:20px; min-height:44px;}
-  .seg-link{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; color:#8d6539;}
-  .seg-link svg{width:15px; height:15px; transition:transform .2s ease;}
-  .seg-card:hover .seg-link svg{transform:translateX(-4px);}
+  .cust-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:transparent;}
+  .cust-icon{width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .cust-icon svg{width:24px; height:24px; color:#fff;}
+  .cust-card h3{font-size:18.5px; margin-bottom:8px;}
+  .cust-card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:20px; min-height:44px;}
+  .cust-link{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; color:#8d6539;}
+  .cust-link svg{width:15px; height:15px; transition:transform .2s ease;}
+  .cust-card:hover .cust-link svg{transform:translateX(-4px);}
+
+  /* ---------- materials / bento swatch gallery ---------- */
+  .mat-frame{
+    position:relative;
+    background:#F2EDE2;
+    border-radius:28px;
+    padding:14px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.4);
+    max-width:620px;
+    margin-inline:auto;
+  }
+  .mat-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows:90px;
+    gap:12px;
+  }
+  .mat-tile{
+    position:relative; border-radius:14px; overflow:hidden;
+    cursor:pointer; -webkit-tap-highlight-color:transparent;
+    box-shadow:0 6px 16px -8px rgba(0,0,0,.35);
+  }
+  .mat-tile.span-2x1{grid-column:span 2; grid-row:span 1;}
+  .mat-tile.span-1x2{grid-column:span 1; grid-row:span 2;}
+  .mat-tile.span-2x2{grid-column:span 2; grid-row:span 2;}
+  .mat-tile.span-1x1{grid-column:span 1; grid-row:span 1;}
+
+  .mat-tile .mat-bg{position:absolute; inset:0; transition:transform .5s ease;}
+  .mat-tile:hover .mat-bg, .mat-tile.touched .mat-bg{transform:scale(1.06);}
+  .mat-overlay{
+    position:absolute; inset:0; display:flex; align-items:flex-end;
+    padding:12px; background:linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.08) 60%, rgba(0,0,0,0) 100%);
+    opacity:0; transition:opacity .3s ease;
+  }
+  .mat-tile:hover .mat-overlay, .mat-tile.touched .mat-overlay{opacity:1;}
+  .mat-overlay h4{
+    font-size:13.5px; color:#fff; font-family:'IBM Plex Sans Arabic'; font-weight:700;
+    opacity:0; transform:translateY(6px); transition:opacity .3s ease .05s, transform .3s ease .05s;
+    line-height:1.4;
+  }
+  .mat-tile:hover .mat-overlay h4, .mat-tile.touched .mat-overlay h4{opacity:1; transform:translateY(0);}
+  .mat-tile::after{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18); border-radius:14px; pointer-events:none;}
+
+  .mat-caption{
+    position:absolute; bottom:-18px; left:50%; transform:translateX(-50%);
+    display:flex; align-items:center; gap:10px;
+    background:#1B1815; color:#F8F4EA;
+    padding:12px 22px; border-radius:999px;
+    font-family:'Noto Kufi Arabic'; font-weight:700; font-size:14px;
+    white-space:nowrap; box-shadow:0 12px 24px -10px rgba(0,0,0,.5);
+    z-index:2;
+  }
+  .mat-caption svg{width:17px; height:17px; color:#f5ce91;}
+  .mat-hint{text-align:center; font-size:13px; color:var(--ink-soft); margin-top:44px; display:flex; align-items:center; justify-content:center; gap:8px;}
+  .mat-hint svg{width:15px; height:15px; color:#8d6539;}
+
 
   /* ---------- trust bar ---------- */
   .trust-bar{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; background:var(--card);}
@@ -416,7 +472,7 @@
   /* ================= RESPONSIVE ================= */
   @media (max-width:1080px){
     .cat-grid{grid-template-columns:repeat(2,1fr);}
-    .seg-grid{grid-template-columns:repeat(2,1fr);}
+    .cust-grid{grid-template-columns:repeat(2,1fr);}
     .port-grid{grid-template-columns:repeat(2,1fr);}
     .prod-grid, .prod-panel.active{grid-template-columns:repeat(2,1fr);}
     .serv-grid{grid-template-columns:repeat(3,1fr);}
@@ -447,7 +503,10 @@
 
   @media (max-width:760px){
     .section{padding:64px 0;}
-    .seg-grid{grid-template-columns:1fr 1fr;}
+    .cust-grid{grid-template-columns:1fr 1fr;}
+    .mat-grid{grid-auto-rows:76px; gap:9px;}
+    .mat-frame{padding:10px; border-radius:22px;}
+    .mat-tile, .mat-tile::after{border-radius:11px;}
     .cat-grid{grid-template-columns:1fr;}
     .port-grid{grid-template-columns:1fr 1fr;}
     .prod-grid, .prod-panel.active{grid-template-columns:1fr 1fr;}
@@ -462,7 +521,12 @@
 
   @media (max-width:520px){
     .container{padding-inline:18px;}
-    .seg-grid{grid-template-columns:1fr;}
+    .cust-grid{grid-template-columns:1fr;}
+    .mat-grid{grid-auto-rows:64px; gap:7px;}
+    .mat-frame{padding:8px; border-radius:18px;}
+    .mat-caption{font-size:12px; padding:10px 16px; bottom:-16px;}
+    .mat-overlay{padding:8px;}
+    .mat-overlay h4{font-size:11px;}
     .port-grid{grid-template-columns:1fr;}
     .prod-grid, .prod-panel.active{grid-template-columns:1fr 1fr;}
     .serv-grid{grid-template-columns:1fr 1fr;}
@@ -484,12 +548,11 @@
       </a>
       <nav class="main-nav">
         <a href="#top">الرئيسية</a>
-        <a href="#about">من نحن</a>
-        <a href="#products">المنتجات ^</a>
-        <a href="#categories">جميع الأقسام</a>
-        <a href="#faq">التعليمات</a>
-        <a href="#contact">أتصال</a>
-        <a href="#blog">مدونة</a>
+        <a href="#materials">الخامات</a>
+        <a href="#products">المتجر</a>
+        <a href="#categories">أقسامنا</a>
+        <a href="#blog">مدونتنا</a>
+        <a href="#rep">التواصل</a>
       </nav>
     </div>
     <div class="header-actions">
@@ -526,12 +589,11 @@
     </a>
     <div class="drawer-links">
       <a href="#top">الرئيسية</a>
-      <a href="#about">من نحن</a>
-      <a href="#products">المنتجات ^</a>
-      <a href="#categories">جميع الأقسام</a>
-      <a href="#faq">التعليمات</a>
-      <a href="#contact">أتصال</a>
-      <a href="#blog">مدونة</a>
+      <a href="#materials">الخامات</a>
+      <a href="#products">المتجر</a>
+      <a href="#categories">أقسامنا</a>
+      <a href="#blog">مدونتنا</a>
+      <a href="#rep">التواصل</a>
     </div>
     <div class="drawer-cta">
       <a class="btn btn-primary btn-block" href="#rep">اطلب مندوب مبيعات</a>
@@ -583,78 +645,107 @@
   </div>
 </section>
 
-<!-- ================= SEGMENTATION ================= -->
-<section class="section" id="segmentation">
+<!-- ================= MATERIALS / SAMPLES GALLERY ================= -->
+<section class="section alt" id="materials">
   <div class="container">
     <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> مسارك يبدأ هنا</div>
-      <h2>من أنت؟ اختر المسار المناسب لك</h2>
-      <p>كل عميل له احتياج مختلف — وصلنا للخدمة التي تناسبك مباشرة دون تصفح طويل.</p>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> عينات وخامات</div>
+      <h2>المس الخامة قبل ما تقرر</h2>
+      <p>مجموعة مختارة من خاماتنا الحقيقية — مرّر أو المس أي مربع لتشاهد اسم الخامة.</p>
     </div>
-    <div class="seg-grid">
-      <div class="seg-card" data-reveal>
-        <div class="seg-icon swatch-charcoal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg>
+
+    <div style="position:relative; padding-bottom:24px;" data-reveal>
+      <div class="mat-frame">
+        <div class="mat-grid">
+          <!-- Row 1-2: gold wide top-right area (2x1) -->
+          <div class="mat-tile span-2x1" tabindex="0">
+            <div class="mat-bg swatch-gold" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>لمسات نحاسية ذهبية</h4></div>
+          </div>
+          <!-- marble tall right (1x2) -->
+          <div class="mat-tile span-1x2" tabindex="0">
+            <div class="mat-bg swatch-marble" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>رخام كرارا الإيطالي</h4></div>
+          </div>
+
+          <!-- aqua small -->
+          <div class="mat-tile span-1x1" tabindex="0">
+            <div class="mat-bg swatch-aqua" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>بلاط مسابح مانع للانزلاق</h4></div>
+          </div>
+          <!-- charcoal tall -->
+          <div class="mat-tile span-1x2" tabindex="0">
+            <div class="mat-bg swatch-charcoal" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>واجهات مطفأة أنثراسايت</h4></div>
+          </div>
+
+          <!-- gold tall left -->
+          <div class="mat-tile span-1x2" tabindex="0">
+            <div class="mat-bg swatch-gold" style="position:absolute; inset:0; filter:brightness(.92) saturate(1.1);"></div>
+            <div class="mat-overlay"><h4>خشب البلوط الطبيعي</h4></div>
+          </div>
+          <!-- turf small -->
+          <div class="mat-tile span-1x1" tabindex="0">
+            <div class="mat-bg swatch-turf" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>عشب صناعي كثيف 30مم</h4></div>
+          </div>
+          <!-- wood stripe tall right -->
+          <div class="mat-tile span-1x2" tabindex="0">
+            <div class="mat-bg swatch-wood" style="position:absolute; inset:0;"></div>
+            <div class="mat-overlay"><h4>باركيه خشب الجوز</h4></div>
+          </div>
+
+          <!-- marble wide bottom -->
+          <div class="mat-tile span-2x1" tabindex="0">
+            <div class="mat-bg swatch-marble" style="position:absolute; inset:0; filter:brightness(.97);"></div>
+            <div class="mat-overlay"><h4>بورسلان رمادي مطفي</h4></div>
+          </div>
         </div>
-        <h3>صاحب مشروع</h3>
-        <p>تصميم وتنفيذ شامل لفيلتك أو منشأتك من الفكرة حتى التسليم.</p>
-        <a href="#rep" class="seg-link">احجز استشارة مجانية
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </a>
-      </div>
-      <div class="seg-card" data-reveal>
-        <div class="seg-icon swatch-wood">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v6H3zM3 15h18v6H3zM3 9h6v6H3zM15 9h6v6h-6z"/></svg>
+
+        <div class="mat-caption">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          عيّنات من خاماتنا الحقيقية
         </div>
-        <h3>مقاول / تنفيذ</h3>
-        <p>توريد بالجملة وأسعار خاصة للكميات مع التزام في مواعيد التسليم.</p>
-        <a href="#rep" class="seg-link">اطلب عرض سعر بالجملة
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </a>
       </div>
-      <div class="seg-card" data-reveal>
-        <div class="seg-icon swatch-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <h3>استشاري / مصمم</h3>
-        <p>كتالوج فني وعينات خامات حقيقية، وشراكة تجارية طويلة الأمد.</p>
-        <a href="#rep" class="seg-link">تواصل كشريك عمل
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </a>
-      </div>
-      <div class="seg-card" data-reveal>
-        <div class="seg-icon swatch-aqua">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-        </div>
-        <h3>عميل تجزئة</h3>
-        <p>تسوّق قطعة واحدة أو أكثر مباشرة من المتجر الإلكتروني بسهولة.</p>
-        <a href="#products" class="seg-link">تسوّق الآن
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </a>
-      </div>
+    </div>
+
+    <p class="mat-hint" data-reveal>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      المس أو مرّر الماوس فوق أي مربع لمشاهدة اسم الخامة
+    </p>
+    <div class="products-more" data-reveal>
+      <a href="#rep" class="btn btn-outline">اطلب عينات مجانية</a>
     </div>
   </div>
 </section>
 
-<!-- ================= TRUST BAR ================= -->
-<section style="padding:0 0 90px;">
-  <div class="container" data-reveal>
-    <div class="trust-bar">
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <div><h4>توصيل سريع</h4><p>خلال يومي عمل داخل المملكة</p></div>
+<!-- ================= SERVICES ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> خدماتنا</div>
+      <h2>خدمات متكاملة بلمسة فنية فاخرة</h2>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg></div>
+        <h4>تركيب باركيه وأرضيات خشبية</h4><p>تركيب احترافي لجميع أنواع الباركيه والأرضيات الخشبية</p>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
-        <div><h4>دفع آمن ومرن</h4><p>بطاقات ائتمان وتقسيط</p></div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h4>ديكورات جدارية وورق جدران</h4><p>تصاميم عصرية وكلاسيكية لجميع الغرف</p>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
-        <div><h4>ضمان الجودة</h4><p>على كافة المنتجات والتنفيذ</p></div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>أرضيات سيراميك وبلاط</h4><p>توريد وتركيب سيراميك وبلاط بأعلى معايير الجودة</p>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-        <div><h4>دعم متخصص</h4><p>فريق مبيعات وفني جاهز دوماً</p></div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h4>عزل وطبقات أرضية</h4><p>حلول عزل كاملة لحماية الأرضيات من الرطوبة</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+        <h4>صيانة وتنظيف الأرضيات</h4><p>خدمات صيانة دورية وتنظيف احترافي للأرضيات</p>
       </div>
     </div>
   </div>
@@ -735,8 +826,85 @@
   </div>
 </section>
 
+<!-- ================= WHO WE SERVE / CUSTOMERS ================= -->
+<section class="section alt" id="segmentation">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> من هم عملاؤنا</div>
+      <h2>نخدم كل من يبني ويصمم وينفّذ</h2>
+      <p>من صاحب المشروع الفردي إلى المقاول ومكتب التصميم، لدينا حل مخصص لكل نوع من عملائنا.</p>
+    </div>
+    <div class="cust-grid">
+      <div class="cust-card" data-reveal>
+        <div class="cust-icon swatch-charcoal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg>
+        </div>
+        <h3>صاحب مشروع</h3>
+        <p>تصميم وتنفيذ شامل لفيلتك أو منشأتك من الفكرة حتى التسليم.</p>
+        <a href="#rep" class="cust-link">احجز استشارة مجانية
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="cust-card" data-reveal>
+        <div class="cust-icon swatch-wood">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v6H3zM3 15h18v6H3zM3 9h6v6H3zM15 9h6v6h-6z"/></svg>
+        </div>
+        <h3>مقاول / تنفيذ</h3>
+        <p>توريد بالجملة وأسعار خاصة للكميات مع التزام في مواعيد التسليم.</p>
+        <a href="#rep" class="cust-link">اطلب عرض سعر بالجملة
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="cust-card" data-reveal>
+        <div class="cust-icon swatch-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <h3>استشاري / مصمم</h3>
+        <p>كتالوج فني وعينات خامات حقيقية، وشراكة تجارية طويلة الأمد.</p>
+        <a href="#rep" class="cust-link">تواصل كشريك عمل
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="cust-card" data-reveal>
+        <div class="cust-icon swatch-aqua">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        </div>
+        <h3>عميل تجزئة</h3>
+        <p>تسوّق قطعة واحدة أو أكثر مباشرة من المتجر الإلكتروني بسهولة.</p>
+        <a href="#products" class="cust-link">تسوّق الآن
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST BAR ================= -->
+<section style="padding:0 0 90px;">
+  <div class="container" data-reveal>
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div><h4>توصيل سريع</h4><p>خلال يومي عمل داخل المملكة</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+        <div><h4>دفع آمن ومرن</h4><p>بطاقات ائتمان وتقسيط</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+        <div><h4>ضمان الجودة</h4><p>على كافة المنتجات والتنفيذ</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <div><h4>دعم متخصص</h4><p>فريق مبيعات وفني جاهز دوماً</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PRODUCTS ================= -->
-<section class="section alt" id="products">
+<section class="section" id="products">
   <div class="container">
     <div class="section-head center" data-reveal>
       <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> المتجر</div>
@@ -836,6 +1004,74 @@
   </div>
 </section>
 
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> ماذا يقولون</div>
+      <h2>ثقة عملائنا من الأفراد والمقاولين</h2>
+      <p>آراء حقيقية من عملاء تعاملوا معنا في مشاريع تجزئة وتنفيذ كامل.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«تعاملنا معهم في توريد أرضيات مشروع كامل من 40 شقة، الالتزام بالمواعيد والجودة كان ممتازاً من أول يوم.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-charcoal">م.س</div>
+          <div><h5>م. سعود الحربي</h5><span>مقاول تشطيبات — جدة</span></div>
+        </div>
+      </div>
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«فريق التصميم فهم رؤيتنا بسرعة، والتنفيذ كان مطابقاً تماماً للمخطط المعتمد. تجربة احترافية بالكامل.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-gold">أ.ت</div>
+          <div><h5>أمل التميمي</h5><span>مصممة داخلية</span></div>
+        </div>
+      </div>
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«جودة لا تُقارن مقابل السعر، الشحن سريع وفريق خدمة العملاء متجاوب ومحترف للغاية، أنصح وبشدة.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-wood">أ.ع</div>
+          <div><h5>أبو عبدالله</h5><span>عميل تجزئة</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> مدونتنا</div>
+      <h2>نصائح ودلائل تختارها بثقة</h2>
+      <p>محتوى يساعدك تتخذ القرار الصحيح لمشروعك القادم.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-marble"></div>
+        <div class="blog-body"><span class="blog-date">15 أغسطس 2026</span><h4>كيف تختار أرضية الفيلا المناسبة لمناخ جدة؟</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-turf"></div>
+        <div class="blog-body"><span class="blog-date">8 أغسطس 2026</span><h4>دليل اختيار العشب الصناعي لملاعب البادل</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-wood"></div>
+        <div class="blog-body"><span class="blog-date">1 أغسطس 2026</span><h4>5 أخطاء شائعة عند تفصيل المطابخ بالمتر</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= REP REQUEST ================= -->
 <section class="section rep-section" id="rep">
   <div class="container">
@@ -891,106 +1127,6 @@
   </div>
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section" id="testimonials">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> ماذا يقولون</div>
-      <h2>ثقة عملائنا من الأفراد والمقاولين</h2>
-      <p>آراء حقيقية من عملاء تعاملوا معنا في مشاريع تجزئة وتنفيذ كامل.</p>
-    </div>
-    <div class="test-grid">
-      <div class="test-card" data-reveal>
-        <div class="test-stars">★★★★★</div>
-        <p>«تعاملنا معهم في توريد أرضيات مشروع كامل من 40 شقة، الالتزام بالمواعيد والجودة كان ممتازاً من أول يوم.»</p>
-        <div class="test-who">
-          <div class="test-avatar swatch-charcoal">م.س</div>
-          <div><h5>م. سعود الحربي</h5><span>مقاول تشطيبات — جدة</span></div>
-        </div>
-      </div>
-      <div class="test-card" data-reveal>
-        <div class="test-stars">★★★★★</div>
-        <p>«فريق التصميم فهم رؤيتنا بسرعة، والتنفيذ كان مطابقاً تماماً للمخطط المعتمد. تجربة احترافية بالكامل.»</p>
-        <div class="test-who">
-          <div class="test-avatar swatch-gold">أ.ت</div>
-          <div><h5>أمل التميمي</h5><span>مصممة داخلية</span></div>
-        </div>
-      </div>
-      <div class="test-card" data-reveal>
-        <div class="test-stars">★★★★★</div>
-        <p>«جودة لا تُقارن مقابل السعر، الشحن سريع وفريق خدمة العملاء متجاوب ومحترف للغاية، أنصح وبشدة.»</p>
-        <div class="test-who">
-          <div class="test-avatar swatch-wood">أ.ع</div>
-          <div><h5>أبو عبدالله</h5><span>عميل تجزئة</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="section alt">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> خدماتنا</div>
-      <h2>خدمات متكاملة بلمسة فنية فاخرة</h2>
-    </div>
-    <div class="serv-grid">
-      <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg></div>
-        <h4>تركيب باركيه وأرضيات خشبية</h4><p>تركيب احترافي لجميع أنواع الباركيه والأرضيات الخشبية</p>
-      </div>
-      <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h4>ديكورات جدارية وورق جدران</h4><p>تصاميم عصرية وكلاسيكية لجميع الغرف</p>
-      </div>
-      <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h4>أرضيات سيراميك وبلاط</h4><p>توريد وتركيب سيراميك وبلاط بأعلى معايير الجودة</p>
-      </div>
-      <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-        <h4>عزل وطبقات أرضية</h4><p>حلول عزل كاملة لحماية الأرضيات من الرطوبة</p>
-      </div>
-      <div class="serv-card" data-reveal>
-        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <h4>صيانة وتنظيف الأرضيات</h4><p>خدمات صيانة دورية وتنظيف احترافي للأرضيات</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BLOG ================= -->
-<section class="section" id="blog">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <div class="eyebrow"><span class="dot"></span> مدونتنا</div>
-      <h2>نصائح ودلائل تختارها بثقة</h2>
-      <p>محتوى يساعدك تتخذ القرار الصحيح لمشروعك القادم.</p>
-    </div>
-    <div class="blog-grid">
-      <a href="#" class="blog-card" data-reveal>
-        <div class="blog-thumb swatch swatch-marble"></div>
-        <div class="blog-body"><span class="blog-date">15 أغسطس 2026</span><h4>كيف تختار أرضية الفيلا المناسبة لمناخ جدة؟</h4>
-          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-        </div>
-      </a>
-      <a href="#" class="blog-card" data-reveal>
-        <div class="blog-thumb swatch swatch-turf"></div>
-        <div class="blog-body"><span class="blog-date">8 أغسطس 2026</span><h4>دليل اختيار العشب الصناعي لملاعب البادل</h4>
-          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-        </div>
-      </a>
-      <a href="#" class="blog-card" data-reveal>
-        <div class="blog-thumb swatch swatch-wood"></div>
-        <div class="blog-body"><span class="blog-date">1 أغسطس 2026</span><h4>5 أخطاء شائعة عند تفصيل المطابخ بالمتر</h4>
-          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ================= NEWSLETTER CTA ================= -->
 <section class="section" style="padding-top:0;">
   <div class="container" data-reveal>
@@ -1037,10 +1173,9 @@
       <div class="footer-col">
         <h5>معلومات عنا</h5>
         <ul>
-          <li><a href="#">من نحن</a></li>
-          <li><a href="#">جميع المنتجات</a></li>
-          <li><a href="#">المدونة</a></li>
-          <li><a href="#">اتصل بنا</a></li>
+          <li><a href="#products">جميع المنتجات</a></li>
+          <li><a href="#blog">المدونة</a></li>
+          <li><a href="#rep">اتصل بنا</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1128,6 +1263,23 @@
   } else {
     revealEls.forEach(el => el.classList.add('in'));
   }
+
+  // materials gallery: tap-to-reveal on touch devices
+  const matTiles = document.querySelectorAll('.mat-tile');
+  matTiles.forEach(tile => {
+    tile.addEventListener('click', (e) => {
+      const isTouch = window.matchMedia('(hover: none)').matches;
+      if (!isTouch) return;
+      const alreadyOpen = tile.classList.contains('touched');
+      matTiles.forEach(t => t.classList.remove('touched'));
+      if (!alreadyOpen) tile.classList.add('touched');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.mat-tile')) {
+      matTiles.forEach(t => t.classList.remove('touched'));
+    }
+  });
 
   // rep form fake submit
   const repForm = document.getElementById('repForm');
