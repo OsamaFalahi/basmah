@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>بصمة عامة | أرضيات وديكورات فاخرة — تصميم وتوريد وتنفيذ</title>
+<meta name="description" content="متجر بصمة عامة: أرضيات، ديكورات، مطابخ، ملاعب رياضية ومسابح — نخدم أصحاب المشاريع والمقاولين والمستشارين وعملاء التجزئة في جميع أنحاء المملكة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#f5f0e8;
+    --ink-soft:#c4bba8;
+    --paper:#000000;
+    --paper-alt:#0a0a0a;
+    --paper-deep:#111111;
+    --card:#111111;
+    --brass:#f5ce91;
+    --brass-deep:#8d6539;
+    --clay:#8B4227;
+    --line: rgba(255,255,255,.1);
+    --line-soft: rgba(255,255,255,.06);
+    --marble1:#EDEAE3; --marble2:#CFC9BC; --marble3:#B7AE9C;
+    --wood1:#C79A63; --wood2:#8F5A2E; --wood3:#5C3A1E;
+    --turf1:#7A9E4C; --turf2:#4E7A2B; --turf3:#33511C;
+    --aqua1:#7FB8C4; --aqua2:#3E828F; --aqua3:#295B64;
+    --gold1:#E7C878; --gold2:#B8912F; --gold3:#8d6539;
+    --charcoal1:#5B564D; --charcoal2:#3A362F; --charcoal3:#211E1A;
+    --bg-dark:#1B1815;
+    --bg-dark:#1B1815;
+    --radius:14px;
+    --radius-lg:22px;
+    --shadow: 0 10px 30px -12px rgba(0,0,0,.6);
+    --shadow-sm: 0 4px 14px -6px rgba(0,0,0,.5);
+    --container: 1240px;
+    --header-h: 78px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; scroll-padding-top: calc(var(--header-h) + 16px);}
+  body{
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer; border:none; background:none;}
+  input, select, textarea{font-family:inherit;}
+
+  h1,h2,h3,h4{
+    font-family:'Noto Kufi Arabic', sans-serif;
+    line-height:1.28;
+    color:var(--ink);
+    font-weight:800;
+  }
+
+  .container{max-width:var(--container); margin-inline:auto; padding-inline:24px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Noto Kufi Arabic', sans-serif;
+    font-size:13px; font-weight:700; letter-spacing:.5px;
+    color:#8d6539;
+    background:rgba(245,206,145,.15);
+    border:1px solid rgba(141,101,57,.35);
+    padding:6px 14px; border-radius:999px;
+    margin-bottom:16px;
+  }
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:#f5ce91;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head.center{margin-inline:auto; text-align:center;}
+  .section-head h2{font-size:clamp(26px,3.4vw,38px); margin-bottom:12px;}
+  .section-head p{color:var(--ink-soft); font-size:16.5px;}
+
+  .section{padding:88px 0;}
+  .section.alt{background:var(--paper-alt);}
+  .section.dark{background:var(--bg-dark); color:#EFE9DC;}
+  .section.dark h2, .section.dark h3, .section.dark h4{color:#F8F4EA;}
+  .section.dark .section-head p{color:#C9C0AE;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-family:'Noto Kufi Arabic', sans-serif;
+    font-weight:700; font-size:15.5px;
+    padding:15px 30px; border-radius:10px;
+    transition:transform .22s ease, box-shadow .22s ease, background .22s ease, color .22s ease;
+    white-space:nowrap;
+  }
+  .btn svg{width:19px; height:19px; flex:none;}
+  .btn-primary{background:#8d6539; color:#fff; box-shadow:0 10px 24px -10px rgba(141,101,57,.65);}
+  .btn-primary:hover{background:#8d6539; transform:translateY(-2px);}
+  .btn-outline{background:transparent; color:var(--ink); border:1.5px solid var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px);}
+  .btn-outline.on-dark{color:#F8F4EA; border-color:rgba(248,244,234,.5);}
+  .btn-outline.on-dark:hover{background:#F8F4EA; color:var(--ink);}
+  .btn-ghost{background:rgba(255,255,255,.05); color:var(--ink); font-weight:600;}
+  .btn-ghost:hover{background:rgba(255,255,255,.1);}
+  .btn-whatsapp{background:#3C7A5B; color:#fff;}
+  .btn-whatsapp:hover{background:#2F6349; transform:translateY(-2px);}
+  .btn-block{width:100%;}
+  .btn-sm{padding:11px 20px; font-size:14px;}
+
+  /* ---------- swatch tiles (signature material system) ---------- */
+  .swatch{ position:relative; border-radius:10px; overflow:hidden; }
+  .swatch::after{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,.25), inset 0 -12px 20px -10px rgba(0,0,0,.35);}
+  .swatch-marble{background:
+      radial-gradient(120% 90% at 20% 15%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(128deg, var(--marble1), var(--marble2) 45%, var(--marble3));}
+  .swatch-wood{background: repeating-linear-gradient(100deg, var(--wood1) 0 6px, var(--wood2) 6px 11px, var(--wood1) 11px 17px, var(--wood3) 17px 19px);}
+  .swatch-turf{background: radial-gradient(120% 100% at 25% 0%, var(--turf1), var(--turf2) 55%, var(--turf3));}
+  .swatch-aqua{background: linear-gradient(155deg, var(--aqua1), var(--aqua2) 55%, var(--aqua3));}
+  .swatch-gold{background: linear-gradient(135deg, var(--gold1), var(--gold2) 55%, var(--gold3));}
+  .swatch-charcoal{background: linear-gradient(135deg, var(--charcoal1), var(--charcoal2) 60%, var(--charcoal3));}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:60;
+    height:var(--header-h);
+    display:flex; align-items:center;
+    background:rgba(246,241,231,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-soft);
+    transition:box-shadow .25s ease, background .25s ease;
+  }
+  .site-header.scrolled{box-shadow:0 8px 24px -16px rgba(0,0,0,.4); background:rgba(0,0,0,.97);}
+  .header-inner{display:flex; align-items:center; justify-content:space-between; gap:20px; width:100%;}
+  .logo{display:flex; align-items:center; gap:10px; font-family:'Noto Kufi Arabic'; font-weight:900; font-size:20px;}
+  .logo-mark{width:36px; height:36px; border-radius:9px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2px; padding:4px; background:var(--bg-dark);}
+  .logo-mark span{border-radius:2px;}
+  .logo-mark span:nth-child(1){background:#f5ce91;}
+  .logo-mark span:nth-child(2){background:var(--marble2);}
+  .logo-mark span:nth-child(3){background:var(--turf2);}
+  .logo-mark span:nth-child(4){background:var(--clay);}
+
+  .main-nav{display:flex; align-items:center; gap:30px;}
+  .main-nav a{font-size:15px; font-weight:600; position:relative; padding:6px 0;}
+  .main-nav a::after{content:""; position:absolute; right:0; bottom:0; height:2px; width:0; background:#f5ce91; transition:width .25s ease;}
+  .main-nav a:hover::after{width:100%;}
+
+  .header-actions{display:flex; align-items:center; gap:10px;}
+  .icon-btn{
+    width:42px; height:42px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:#f5f0e8; background:rgba(255,255,255,.06);
+    transition:background .2s ease, transform .2s ease;
+    position:relative;
+  }
+  .icon-btn:hover{background:rgba(255,255,255,.12); transform:translateY(-1px);}
+  .icon-btn svg{width:19px; height:19px;}
+  .badge{
+    position:absolute; top:-3px; left:-3px; background:var(--clay); color:#fff;
+    font-size:10px; font-weight:700; width:17px; height:17px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .phone-pill{
+    display:flex; align-items:center; gap:8px;
+    background:var(--bg-dark); color:var(--paper);
+    padding:9px 16px 9px 12px; border-radius:999px;
+    font-weight:700; font-size:14.5px; direction:ltr;
+  }
+  .phone-pill svg{width:16px; height:16px; color:#f5ce91;}
+  .burger{display:none; width:42px; height:42px; border-radius:10px; background:rgba(255,255,255,.06); align-items:center; justify-content:center;}
+  .burger svg{width:20px; height:20px;}
+
+  /* mobile drawer */
+  .mobile-drawer{
+    position:fixed; inset:0; z-index:90; display:none;
+  }
+  .mobile-drawer.open{display:block;}
+  .drawer-backdrop{position:absolute; inset:0; background:rgba(0,0,0,.7);}
+  .drawer-panel{
+    position:absolute; top:0; bottom:0; right:0; width:min(84vw,340px);
+    background:var(--paper); padding:26px 22px; overflow-y:auto;
+    box-shadow:-20px 0 40px -20px rgba(0,0,0,.6);
+    display:flex; flex-direction:column; gap:22px;
+  }
+  .drawer-panel a{font-weight:700; font-size:16px;}
+  .drawer-close{align-self:flex-start; width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center;}
+  .drawer-close svg{width:18px; height:18px;}
+  .drawer-links{display:flex; flex-direction:column; gap:16px; border-top:1px solid var(--line); padding-top:18px;}
+  .drawer-cta{display:flex; flex-direction:column; gap:12px; margin-top:auto;}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; min-height:85vh; padding:70px 0 90px; display:flex; align-items:center; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1fr; gap:36px; align-items:center; max-width:720px; margin-inline:auto;}
+  .hero-stats{display:flex; gap:28px; margin:30px 0 34px; flex-wrap:wrap;}
+  .hero-stat b{display:block; font-family:'Noto Kufi Arabic'; font-size:26px; color:#fff;}
+  .hero-stat span{font-size:13.5px; color:rgba(255,255,255,.7);}
+  .hero h1{font-size:clamp(32px,4.6vw,52px); letter-spacing:-.5px; color:#fff;}
+  .hero h1 em{font-style:normal; color:#f5ce91;}
+  .hero p.lead{font-size:17.5px; color:rgba(255,255,255,.85); max-width:520px; margin-top:18px;}
+  .hero-ctas{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .hero .eyebrow{color:#f5ce91; background:rgba(245,206,145,.15); border-color:rgba(245,206,145,.3);}
+
+  .hero-slides{position:absolute; inset:0; z-index:0;}
+  .hero-slide{position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.2s ease;}
+  .hero-slide.active{opacity:1;}
+  .hero-blur{position:absolute; inset:0; z-index:1; backdrop-filter:blur(5px); background:rgba(0,0,0,.3);}
+  .hero-dots{position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:3; display:flex; gap:10px;}
+  .hero-dot{width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.5); border:none; cursor:pointer; transition:all .3s ease;}
+  .hero-dot.active{background:#fff; transform:scale(1.3);}
+
+
+
+  /* ---------- segmentation ---------- */
+  .seg-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .seg-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:28px 24px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    position:relative; overflow:hidden;
+  }
+  .seg-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:transparent;}
+  .seg-icon{width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .seg-icon svg{width:24px; height:24px; color:#fff;}
+  .seg-card h3{font-size:18.5px; margin-bottom:8px;}
+  .seg-card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:20px; min-height:44px;}
+  .seg-link{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; color:#8d6539;}
+  .seg-link svg{width:15px; height:15px; transition:transform .2s ease;}
+  .seg-card:hover .seg-link svg{transform:translateX(-4px);}
+
+  /* ---------- trust bar ---------- */
+  .trust-bar{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; background:var(--card);}
+  .trust-item{display:flex; align-items:center; gap:14px; padding:26px 22px; border-inline-start:1px solid var(--line);}
+  .trust-item:first-child{border-inline-start:none;}
+  .trust-item .ic{width:44px; height:44px; border-radius:12px; background:rgba(245,206,145,.15); display:flex; align-items:center; justify-content:center; flex:none;}
+  .trust-item .ic svg{width:21px; height:21px; color:#8d6539;}
+  .trust-item h4{font-size:15px; margin-bottom:3px;}
+  .trust-item p{font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- categories ---------- */
+  .cat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .cat-card{
+    position:relative; border-radius:var(--radius-lg); overflow:hidden; height:280px;
+    display:flex; align-items:flex-end; padding:24px; color:#fff;
+    transition:transform .3s ease;
+  }
+  .cat-card:hover{transform:translateY(-6px);}
+  .cat-card::before{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.72) 10%, rgba(0,0,0,.05) 62%);}
+  .cat-card > *{position:relative; z-index:1;}
+  .cat-tag{font-size:12.5px; font-weight:700; background:rgba(255,255,255,.18); backdrop-filter:blur(6px); padding:5px 12px; border-radius:999px; margin-bottom:10px; display:inline-block;}
+  .cat-card h3{color:#fff; font-size:21px; margin-bottom:6px;}
+  .cat-card .go{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; opacity:.9;}
+  .cat-card .go svg{width:14px; height:14px;}
+
+  /* ---------- portfolio ---------- */
+  .port-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .port-card{background:var(--card); border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); transition:transform .25s ease, box-shadow .25s ease;}
+  .port-card:hover{transform:translateY(-5px); box-shadow:var(--shadow);}
+  .port-split{display:grid; grid-template-columns:1fr 1fr; height:150px; position:relative;}
+  .port-split .lbl{position:absolute; bottom:8px; font-size:11px; font-weight:700; color:#fff; background:rgba(0,0,0,.4); padding:3px 9px; border-radius:999px;}
+  .port-split .lbl.before{right:8px;}
+  .port-split .lbl.after{left:8px;}
+  .port-body{padding:18px 20px 22px;}
+  .port-body span{font-size:12.5px; color:#8d6539; font-weight:700;}
+  .port-body h4{font-size:16px; margin-top:6px;}
+
+  /* ---------- products ---------- */
+  .tabs{display:flex; gap:10px; margin-bottom:34px; flex-wrap:wrap;}
+  .tab-btn{
+    padding:11px 22px; border-radius:999px; font-weight:700; font-size:14.5px;
+    background:var(--card); border:1px solid var(--line); color:var(--ink-soft);
+    transition:all .2s ease;
+  }
+  .tab-btn.active{background:var(--bg-dark); color:var(--paper); border-color:var(--bg-dark);}
+  .prod-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .prod-panel{display:none;}
+  .prod-panel.active{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .prod-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;}
+  .prod-card:hover{transform:translateY(-5px); box-shadow:var(--shadow);}
+  .prod-thumb{height:170px; position:relative;}
+  .prod-fav{position:absolute; top:10px; left:10px; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,.85); display:flex; align-items:center; justify-content:center;}
+  .prod-fav svg{width:15px; height:15px;}
+  .prod-body{padding:16px 18px 18px;}
+  .prod-cat{font-size:12px; color:var(--ink-soft);}
+  .prod-body h4{font-size:15.5px; margin:6px 0 10px; font-weight:700; font-family:'IBM Plex Sans Arabic';}
+  .prod-foot{display:flex; align-items:center; justify-content:space-between;}
+  .prod-price{font-family:'Noto Kufi Arabic'; font-weight:800; font-size:16px;}
+  .prod-add{width:36px; height:36px; border-radius:50%; background:var(--bg-dark); color:var(--paper); display:flex; align-items:center; justify-content:center; transition:background .2s ease;}
+  .prod-add:hover{background:#f5ce91;}
+  .prod-add svg{width:16px; height:16px;}
+  .products-more{text-align:center; margin-top:40px;}
+
+  /* ---------- rep request ---------- */
+  .rep-section{padding:0;}
+  .rep-wrap{display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow);}
+  .rep-info{background:var(--bg-dark); color:#F8F4EA; padding:56px 48px; display:flex; flex-direction:column; justify-content:center;}
+  .rep-info .eyebrow{background:rgba(245,206,145,.2); color:#f5ce91; border-color:rgba(245,206,145,.3);}
+  .rep-info h2{color:#fff; font-size:clamp(24px,3vw,32px); margin-bottom:14px;}
+  .rep-info p{color:#C9C0AE; margin-bottom:26px; max-width:400px;}
+  .rep-perks{display:flex; flex-direction:column; gap:14px; margin-bottom:30px;}
+  .rep-perks li{display:flex; align-items:center; gap:12px; font-size:14.5px; color:#EFE9DC;}
+  .rep-perks svg{width:18px; height:18px; color:#f5ce91; flex:none;}
+  .rep-form{background:var(--card); padding:48px; display:flex; flex-direction:column; gap:16px;}
+  .field label{display:block; font-size:13.5px; font-weight:700; margin-bottom:7px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:13px 15px; border-radius:10px; border:1.5px solid var(--line);
+    background:var(--paper); font-size:14.5px; color:var(--ink); transition:border-color .2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:#f5ce91;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .rep-form-foot{display:flex; align-items:center; gap:12px; margin-top:4px; flex-wrap:wrap;}
+  .form-note{font-size:12px; color:var(--ink-soft); display:flex; align-items:center; gap:6px;}
+  .form-note svg{width:14px; height:14px; color:#8d6539;}
+  .toast{
+    position:fixed; bottom:24px; right:24px; z-index:120;
+    background:var(--ink); color:var(--paper); padding:16px 22px; border-radius:12px;
+    display:flex; align-items:center; gap:12px; box-shadow:var(--shadow);
+    transform:translateY(140%); opacity:0; transition:all .35s ease;
+  }
+  .toast.show{transform:translateY(0); opacity:1;}
+  .toast svg{width:20px; height:20px; color:#f5ce91;}
+
+  /* ---------- testimonials ---------- */
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .test-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:28px; position:relative;}
+  .test-stars{display:flex; gap:3px; margin-bottom:14px;}
+  .test-stars svg{width:15px; height:15px; color:#f5ce91;}
+  .test-card p{font-size:15px; color:var(--ink-soft); margin-bottom:20px;}
+  .test-who{display:flex; align-items:center; gap:12px;}
+  .test-avatar{width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Noto Kufi Arabic'; font-weight:800; color:#fff; font-size:15px;}
+  .test-who h5{font-size:14.5px;}
+  .test-who span{font-size:12.5px; color:var(--ink-soft);}
+
+  /* ---------- services ---------- */
+  .serv-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
+  .serv-card{text-align:center; padding:30px 16px; border-radius:var(--radius-lg); border:1px solid var(--line); background:var(--card); transition:transform .25s ease, box-shadow .25s ease;}
+  .serv-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .serv-icon{width:54px; height:54px; border-radius:50%; background:var(--paper-deep); display:flex; align-items:center; justify-content:center; margin:0 auto 16px;}
+  .serv-icon svg{width:24px; height:24px; color:#8d6539;}
+  .serv-card h4{font-size:15.5px; margin-bottom:6px;}
+  .serv-card p{font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- blog ---------- */
+  .blog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .blog-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;}
+  .blog-card:hover{transform:translateY(-5px); box-shadow:var(--shadow);}
+  .blog-thumb{height:150px;}
+  .blog-body{padding:20px 22px 22px;}
+  .blog-date{font-size:12px; color:var(--ink-soft); margin-bottom:8px;}
+  .blog-body h4{font-size:16px; margin-bottom:10px; line-height:1.5;}
+  .blog-read{font-size:13.5px; font-weight:700; color:#8d6539; display:inline-flex; align-items:center; gap:6px;}
+  .blog-read svg{width:14px; height:14px;}
+
+  /* ---------- newsletter cta ---------- */
+  .news-cta{
+    background:linear-gradient(120deg, var(--ink), #2A251E);
+    border-radius:var(--radius-lg); padding:54px 50px;
+    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+    color:#fff; position:relative; overflow:hidden;
+  }
+  .news-cta::before{content:""; position:absolute; inset:0; background:
+    radial-gradient(420px 200px at 90% 0%, rgba(141,101,57,.4), transparent 60%);}
+  .news-cta > *{position:relative; z-index:1;}
+  .news-cta h3{color:#fff; font-size:clamp(20px,2.4vw,27px); margin-bottom:8px;}
+  .news-cta p{color:#C9C0AE; font-size:14.5px;}
+  .news-form{display:flex; gap:10px; min-width:340px;}
+  .news-form input{flex:1; padding:14px 18px; border-radius:10px; border:none; font-size:14.5px;}
+
+  /* ---------- footer ---------- */
+  .site-footer{background:var(--paper-deep); padding-top:64px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; padding-bottom:44px; border-bottom:1px solid var(--line);}
+  .footer-brand p{color:var(--ink-soft); font-size:14px; margin:16px 0 20px; max-width:280px;}
+  .footer-contact{display:flex; flex-direction:column; gap:10px; margin-bottom:20px;}
+  .footer-contact li{display:flex; align-items:center; gap:10px; font-size:14px;}
+  .footer-contact svg{width:16px; height:16px; color:#8d6539; flex:none;}
+  .social-row{display:flex; gap:10px;}
+  .social-row a{width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center;}
+  .social-row svg{width:15px; height:15px;}
+  .footer-col h5{font-family:'Noto Kufi Arabic'; font-size:15px; margin-bottom:18px;}
+  .footer-col ul{display:flex; flex-direction:column; gap:11px;}
+  .footer-col a{font-size:14px; color:var(--ink-soft);}
+  .footer-col a:hover{color:#8d6539;}
+  .footer-bottom{display:flex; align-items:center; justify-content:space-between; padding:22px 0 100px; flex-wrap:wrap; gap:14px;}
+  .footer-bottom p{font-size:13px; color:var(--ink-soft);}
+  .pay-icons{display:flex; gap:8px;}
+  .pay-icons span{width:38px; height:26px; border-radius:5px; background:var(--card); border:1px solid var(--line);}
+
+  /* ---------- mobile sticky bar ---------- */
+  .mobile-bar{
+    display:none; position:fixed; bottom:0; right:0; left:0; z-index:70;
+    background:var(--card); border-top:1px solid var(--line);
+    box-shadow:0 -8px 24px -14px rgba(0,0,0,.25);
+    padding:8px 6px calc(8px + env(safe-area-inset-bottom));
+  }
+  .mobile-bar-grid{display:grid; grid-template-columns:repeat(4,1fr);}
+  .mobile-bar a, .mobile-bar button{
+    display:flex; flex-direction:column; align-items:center; gap:4px;
+    font-size:11px; font-weight:700; color:var(--ink-soft); padding:6px 0;
+  }
+  .mobile-bar svg{width:20px; height:20px;}
+  .mobile-bar .primary{color:#8d6539;}
+  .mobile-bar .wa-dot{position:relative;}
+  .mobile-bar .wa-dot::after{content:""; position:absolute; top:-2px; left:calc(50% - 12px); width:7px; height:7px; border-radius:50%; background:#3C7A5B;}
+
+  /* ---------- reveal ---------- */
+  [data-reveal]{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
+  [data-reveal].in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    [data-reveal]{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width:1080px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .seg-grid{grid-template-columns:repeat(2,1fr);}
+    .port-grid{grid-template-columns:repeat(2,1fr);}
+    .prod-grid, .prod-panel.active{grid-template-columns:repeat(2,1fr);}
+    .serv-grid{grid-template-columns:repeat(3,1fr);}
+    .trust-bar{grid-template-columns:repeat(2,1fr);}
+    .trust-item:nth-child(3){border-inline-start:none;}
+    .trust-item{border-bottom:1px solid var(--line);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+
+  @media (max-width:920px){
+    .main-nav{display:none;}
+    .burger{display:flex;}
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+
+    .hero-stats{justify-content:center;}
+    .hero{min-height:70vh; text-align:center; padding-top:44px; padding-bottom:70px;}
+    .hero p.lead{margin-inline:auto;}
+    .hero-ctas{justify-content:center;}
+    .section-head{margin-inline:auto; text-align:center;}
+    .rep-wrap{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .news-cta{flex-direction:column; text-align:center;}
+    .news-form{width:100%; min-width:0;}
+    body{padding-bottom:64px;}
+    .mobile-bar{display:block;}
+    .phone-pill span{display:none;}
+  }
+
+  @media (max-width:760px){
+    .section{padding:64px 0;}
+    .seg-grid{grid-template-columns:1fr 1fr;}
+    .cat-grid{grid-template-columns:1fr;}
+    .port-grid{grid-template-columns:1fr 1fr;}
+    .prod-grid, .prod-panel.active{grid-template-columns:1fr 1fr;}
+    .serv-grid{grid-template-columns:1fr 1fr;}
+    .trust-bar{grid-template-columns:1fr;}
+    .trust-item{border-inline-start:none; border-bottom:1px solid var(--line);}
+    .test-grid{grid-template-columns:1fr;}
+    .blog-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr; gap:30px;}
+    .rep-info, .rep-form{padding:34px 26px;}
+  }
+
+  @media (max-width:520px){
+    .container{padding-inline:18px;}
+    .seg-grid{grid-template-columns:1fr;}
+    .port-grid{grid-template-columns:1fr;}
+    .prod-grid, .prod-panel.active{grid-template-columns:1fr 1fr;}
+    .serv-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:20px;}
+    .rep-form{padding:28px 20px;}
+    .rep-info{padding:36px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div style="display:flex; align-items:center; gap:36px;">
+      <a href="#top" class="logo">
+        <span class="logo-mark"><span></span><span></span><span></span><span></span></span>
+        بصمة عامة
+      </a>
+      <nav class="main-nav">
+        <a href="#categories">الأقسام</a>
+        <a href="#portfolio">أعمالنا</a>
+        <a href="#products">المنتجات</a>
+        <a href="#rep">اطلب مندوب</a>
+        <a href="#testimonials">آراء العملاء</a>
+        <a href="#blog">المدونة</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <a class="phone-pill" href="tel:0530710810" aria-label="اتصل بنا">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span dir="ltr">0530 710 810</span>
+      </a>
+      <a class="icon-btn" href="https://wa.me/966530710810" target="_blank" rel="noopener" aria-label="واتساب">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.8-.4-1.6-.9-2.3-1.5-.6-.6-1.2-1.3-1.6-2-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9 1-1 2.2-.1 3.6 1.7 2.6 3.1 4 5.9 5.1 2.1.8 2.6.6 3.1.5.7-.1 1.7-.7 1.9-1.4.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="المفضلة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="السلة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="badge">2</span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="القائمة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="mobile-drawer" id="drawer">
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawerClose" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <a class="logo" href="#top" style="font-size:19px;">
+      <span class="logo-mark"><span></span><span></span><span></span><span></span></span> بصمة عامة
+    </a>
+    <div class="drawer-links">
+      <a href="#categories">الأقسام</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#products">المنتجات</a>
+      <a href="#rep">اطلب مندوب</a>
+      <a href="#testimonials">آراء العملاء</a>
+      <a href="#blog">المدونة</a>
+    </div>
+    <div class="drawer-cta">
+      <a class="btn btn-primary btn-block" href="#rep">اطلب مندوب مبيعات</a>
+      <a class="btn btn-whatsapp btn-block" href="https://wa.me/966530710810" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.8-.4-1.6-.9-2.3-1.5-.6-.6-1.2-1.3-1.6-2-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9 1-1 2.2-.1 3.6 1.7 2.6 3.1 4 5.9 5.1 2.1.8 2.6.6 3.1.5.7-.1 1.7-.7 1.9-1.4.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        تواصل واتساب
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('انشاء الملاعب الرياضية.png')"></div>
+    <div class="hero-slide" style="background-image:url('قسم المطابخ والخزائن وغرف النوم.png')"></div>
+    <div class="hero-slide" style="background-image:url('قسم المنتجات.png')"></div>
+    <div class="hero-blur"></div>
+  </div>
+  <div class="hero-dots">
+    <span class="hero-dot active" data-index="0"></span>
+    <span class="hero-dot" data-index="1"></span>
+    <span class="hero-dot" data-index="2"></span>
+  </div>
+  <div class="container">
+    <div class="hero-grid" data-reveal>
+      <div>
+        <div class="eyebrow"><span class="dot"></span> أرضيات · ديكورات · تصميم وتنفيذ</div>
+        <h1>نمنح مشروعك <em>بصمة</em> فاخرة من التصميم حتى التسليم</h1>
+        <p class="lead">نخدم أصحاب المشاريع والمقاولين والمستشارين وعملاء التجزئة بتوريد وتنفيذ الأرضيات والديكورات والمطابخ والملاعب الرياضية في جميع أنحاء المملكة.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>+1200</b><span>مشروع مُنفَّذ</span></div>
+          <div class="hero-stat"><b>12 عاماً</b><span>خبرة متواصلة</span></div>
+          <div class="hero-stat"><b>يومان</b><span>توصيل سريع</span></div>
+          <div class="hero-stat"><b>+40</b><span>فئة منتج</span></div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#products" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+            تسوّق الآن
+          </a>
+          <a href="#rep" class="btn btn-outline on-dark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            اطلب مندوب مبيعات
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEGMENTATION ================= -->
+<section class="section" id="segmentation">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> مسارك يبدأ هنا</div>
+      <h2>من أنت؟ اختر المسار المناسب لك</h2>
+      <p>كل عميل له احتياج مختلف — وصلنا للخدمة التي تناسبك مباشرة دون تصفح طويل.</p>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-card" data-reveal>
+        <div class="seg-icon swatch-charcoal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg>
+        </div>
+        <h3>صاحب مشروع</h3>
+        <p>تصميم وتنفيذ شامل لفيلتك أو منشأتك من الفكرة حتى التسليم.</p>
+        <a href="#rep" class="seg-link">احجز استشارة مجانية
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="seg-card" data-reveal>
+        <div class="seg-icon swatch-wood">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v6H3zM3 15h18v6H3zM3 9h6v6H3zM15 9h6v6h-6z"/></svg>
+        </div>
+        <h3>مقاول / تنفيذ</h3>
+        <p>توريد بالجملة وأسعار خاصة للكميات مع التزام في مواعيد التسليم.</p>
+        <a href="#rep" class="seg-link">اطلب عرض سعر بالجملة
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="seg-card" data-reveal>
+        <div class="seg-icon swatch-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <h3>استشاري / مصمم</h3>
+        <p>كتالوج فني وعينات خامات حقيقية، وشراكة تجارية طويلة الأمد.</p>
+        <a href="#rep" class="seg-link">تواصل كشريك عمل
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="seg-card" data-reveal>
+        <div class="seg-icon swatch-aqua">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        </div>
+        <h3>عميل تجزئة</h3>
+        <p>تسوّق قطعة واحدة أو أكثر مباشرة من المتجر الإلكتروني بسهولة.</p>
+        <a href="#products" class="seg-link">تسوّق الآن
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST BAR ================= -->
+<section style="padding:0 0 90px;">
+  <div class="container" data-reveal>
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div><h4>توصيل سريع</h4><p>خلال يومي عمل داخل المملكة</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+        <div><h4>دفع آمن ومرن</h4><p>بطاقات ائتمان وتقسيط</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+        <div><h4>ضمان الجودة</h4><p>على كافة المنتجات والتنفيذ</p></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <div><h4>دعم متخصص</h4><p>فريق مبيعات وفني جاهز دوماً</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section alt" id="categories">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> أقسامنا</div>
+      <h2>تصفّح أقسامنا الرئيسية</h2>
+      <p>مجموعة متكاملة من الحلول تغطي كل احتياجات مشروعك، من الأرضيات وحتى الملاعب الرياضية.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="#" class="cat-card swatch-marble" data-reveal>
+        <div><span class="cat-tag">أرضيات</span><h3>أرضيات وباركيه فاخر</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+      <a href="#" class="cat-card swatch-gold" data-reveal>
+        <div><span class="cat-tag">ديكورات</span><h3>ديكورات ولمسات فنية</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+      <a href="#" class="cat-card swatch-wood" data-reveal>
+        <div><span class="cat-tag">تفصيل</span><h3>مطابخ وخزائن بالمتر</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+      <a href="#" class="cat-card swatch-turf" data-reveal>
+        <div><span class="cat-tag">إنشاءات</span><h3>ملاعب رياضية وبادل</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+      <a href="#" class="cat-card swatch-aqua" data-reveal>
+        <div><span class="cat-tag">تنفيذ</span><h3>مسابح خاصة وتجارية</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+      <a href="#" class="cat-card swatch-charcoal" data-reveal>
+        <div><span class="cat-tag">خدمة شاملة</span><h3>تصميم وتنفيذ وترميم</h3><span class="go">تصفح القسم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> مشاريعنا</div>
+      <h2>أعمال منفّذة على أرض الواقع</h2>
+      <p>نماذج من مشاريع حقيقية سلّمناها لعملائنا من المقاولين وأصحاب المشاريع.</p>
+    </div>
+    <div class="port-grid">
+      <div class="port-card" data-reveal>
+        <div class="port-split">
+          <div class="swatch swatch-charcoal"><span class="lbl before">قبل</span></div>
+          <div class="swatch swatch-marble"><span class="lbl after">بعد</span></div>
+        </div>
+        <div class="port-body"><span>فيلا سكنية</span><h4>تشطيب أرضيات وصالة معيشة</h4></div>
+      </div>
+      <div class="port-card" data-reveal>
+        <div class="port-split">
+          <div class="swatch swatch-charcoal"><span class="lbl before">قبل</span></div>
+          <div class="swatch swatch-wood"><span class="lbl after">بعد</span></div>
+        </div>
+        <div class="port-body"><span>مكتب إداري</span><h4>ديكور وتفصيل خزائن مكتبية</h4></div>
+      </div>
+      <div class="port-card" data-reveal>
+        <div class="port-split">
+          <div class="swatch swatch-charcoal"><span class="lbl before">قبل</span></div>
+          <div class="swatch swatch-turf"><span class="lbl after">بعد</span></div>
+        </div>
+        <div class="port-body"><span>ملعب خاص</span><h4>إنشاء ملعب بادل بعشب صناعي</h4></div>
+      </div>
+      <div class="port-card" data-reveal>
+        <div class="port-split">
+          <div class="swatch swatch-charcoal"><span class="lbl before">قبل</span></div>
+          <div class="swatch swatch-gold"><span class="lbl after">بعد</span></div>
+        </div>
+        <div class="port-body"><span>معرض تجاري</span><h4>واجهة وديكورات معدنية فاخرة</h4></div>
+      </div>
+    </div>
+    <div class="products-more" data-reveal>
+      <a href="#" class="btn btn-outline">شاهد جميع أعمالنا</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section alt" id="products">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> المتجر</div>
+      <h2>منتجات مختارة بعناية</h2>
+      <p>تشكيلة متنوعة من أفضل أقسامنا — وليست عيّنة واحدة متكررة.</p>
+    </div>
+    <div class="tabs" data-reveal>
+      <button class="tab-btn active" data-tab="best">الأكثر مبيعاً</button>
+      <button class="tab-btn" data-tab="new">وصل حديثاً</button>
+      <button class="tab-btn" data-tab="offers">عروض خاصة</button>
+    </div>
+
+    <div class="prod-panel active" data-panel="best">
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-marble"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">أرضية</span><h4>نعلة حائطية كلاسيكية بيضاء</h4>
+          <div class="prod-foot"><span class="prod-price">240 ريال</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-gold"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">ديكور</span><h4>زاوية ديكور روز جولد</h4>
+          <div class="prod-foot"><span class="prod-price">95 ريال</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-wood"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">باركيه</span><h4>باركيه أرضي مقاوم للرطوبة</h4>
+          <div class="prod-foot"><span class="prod-price">89 ريال / م²</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-turf"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">حدائق</span><h4>عشب صناعي كثيف 30مم</h4>
+          <div class="prod-foot"><span class="prod-price">65 ريال / م²</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-panel" data-panel="new">
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-aqua"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">مسابح</span><h4>بلاط مسابح مانع للانزلاق</h4>
+          <div class="prod-foot"><span class="prod-price">110 ريال / م²</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-charcoal"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">مطابخ</span><h4>واجهات مطابخ مطفأة أنيقة</h4>
+          <div class="prod-foot"><span class="prod-price">من 480 ريال / م</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-marble"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">أرضية</span><h4>بديل رخام عالي اللمعان</h4>
+          <div class="prod-foot"><span class="prod-price">130 ريال / م²</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-gold"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">ديكور</span><h4>ورق جدران نسيجي فاخر</h4>
+          <div class="prod-foot"><span class="prod-price">78 ريال / لفة</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-panel" data-panel="offers">
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-wood"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">تركيب</span><h4>باقة تركيب باركيه شاملة</h4>
+          <div class="prod-foot"><span class="prod-price">من 55 ريال / م²</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-turf"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">ملاعب</span><h4>شبك ملاعب مجلفن — عرض محدود</h4>
+          <div class="prod-foot"><span class="prod-price">210 ريال</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-aqua"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">مسابح</span><h4>كسوة حواف مسبح — خصم 15%</h4>
+          <div class="prod-foot"><span class="prod-price">99 ريال / م</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+      <div class="prod-card" data-reveal>
+        <div class="prod-thumb swatch swatch-charcoal"><span class="prod-fav"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1815" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg></span></div>
+        <div class="prod-body"><span class="prod-cat">ديكور</span><h4>إطار جداري أسود مطفي</h4>
+          <div class="prod-foot"><span class="prod-price">120 ريال</span><span class="prod-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-more" data-reveal>
+      <a href="#" class="btn btn-outline">مشاهدة جميع المنتجات</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REP REQUEST ================= -->
+<section class="section rep-section" id="rep">
+  <div class="container">
+    <div class="rep-wrap" data-reveal>
+      <div class="rep-info">
+        <div class="eyebrow"><span class="dot"></span> تواصل مباشر</div>
+        <h2>تفضّل التحدث مع أحد مختصينا؟</h2>
+        <p>اترك بياناتك وسيتواصل معك أحد مندوبي المبيعات خلال دقائق لمناقشة مشروعك أو طلب التوريد بالجملة.</p>
+        <ul class="rep-perks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> رد خلال دقائق في أوقات العمل</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> تسعير خاص لطلبات الجملة والمشاريع</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> معاينة ميدانية عند الحاجة</li>
+        </ul>
+        <a class="btn btn-whatsapp" href="https://wa.me/966530710810" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.8-.4-1.6-.9-2.3-1.5-.6-.6-1.2-1.3-1.6-2-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9 1-1 2.2-.1 3.6 1.7 2.6 3.1 4 5.9 5.1 2.1.8 2.6.6 3.1.5.7-.1 1.7-.7 1.9-1.4.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          تواصل فوري عبر واتساب
+        </a>
+      </div>
+      <form class="rep-form" id="repForm">
+        <div class="field">
+          <label for="repName">الاسم الكامل</label>
+          <input id="repName" type="text" placeholder="مثال: محمد العتيبي" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="repPhone">رقم الجوال</label>
+            <input id="repPhone" type="tel" placeholder="05XXXXXXXX" dir="ltr" required>
+          </div>
+          <div class="field">
+            <label for="repType">نوع الطلب</label>
+            <select id="repType" required>
+              <option value="">اختر...</option>
+              <option>تصميم وتنفيذ مشروع</option>
+              <option>توريد بالجملة (مقاول)</option>
+              <option>شراكة استشارية</option>
+              <option>استفسار عن منتج</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="repNote">ملاحظة (اختياري)</label>
+          <textarea id="repNote" rows="3" placeholder="أخبرنا بتفاصيل مشروعك..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          أرسل طلبك الآن
+        </button>
+        <div class="rep-form-foot">
+          <span class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> بياناتك تُستخدم للتواصل معك فقط</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> ماذا يقولون</div>
+      <h2>ثقة عملائنا من الأفراد والمقاولين</h2>
+      <p>آراء حقيقية من عملاء تعاملوا معنا في مشاريع تجزئة وتنفيذ كامل.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«تعاملنا معهم في توريد أرضيات مشروع كامل من 40 شقة، الالتزام بالمواعيد والجودة كان ممتازاً من أول يوم.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-charcoal">م.س</div>
+          <div><h5>م. سعود الحربي</h5><span>مقاول تشطيبات — جدة</span></div>
+        </div>
+      </div>
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«فريق التصميم فهم رؤيتنا بسرعة، والتنفيذ كان مطابقاً تماماً للمخطط المعتمد. تجربة احترافية بالكامل.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-gold">أ.ت</div>
+          <div><h5>أمل التميمي</h5><span>مصممة داخلية</span></div>
+        </div>
+      </div>
+      <div class="test-card" data-reveal>
+        <div class="test-stars">★★★★★</div>
+        <p>«جودة لا تُقارن مقابل السعر، الشحن سريع وفريق خدمة العملاء متجاوب ومحترف للغاية، أنصح وبشدة.»</p>
+        <div class="test-who">
+          <div class="test-avatar swatch-wood">أ.ع</div>
+          <div><h5>أبو عبدالله</h5><span>عميل تجزئة</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="margin-inline:auto;"><span class="dot"></span> خدماتنا</div>
+      <h2>خدمات متكاملة بلمسة فنية فاخرة</h2>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h4>الهوية البصرية</h4><p>تصاميم فريدة تترك أثراً</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg></div>
+        <h4>التصميم الداخلي</h4><p>هندسة المساحات الفاخرة</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h4>تطوير الويب</h4><p>برمجة متكاملة ومقاومة للأخطاء</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>الاستشارات الفنية</h4><p>توجيه احترافي متكامل لمشروعك</p>
+      </div>
+      <div class="serv-card" data-reveal>
+        <div class="serv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+        <h4>إدارة المحتوى</h4><p>تنسيق وهيكلة وتوثيق قياسي</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> مدونتنا</div>
+      <h2>نصائح ودلائل تختارها بثقة</h2>
+      <p>محتوى يساعدك تتخذ القرار الصحيح لمشروعك القادم.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-marble"></div>
+        <div class="blog-body"><span class="blog-date">15 أغسطس 2026</span><h4>كيف تختار أرضية الفيلا المناسبة لمناخ جدة؟</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-turf"></div>
+        <div class="blog-body"><span class="blog-date">8 أغسطس 2026</span><h4>دليل اختيار العشب الصناعي لملاعب البادل</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+      <a href="#" class="blog-card" data-reveal>
+        <div class="blog-thumb swatch swatch-wood"></div>
+        <div class="blog-body"><span class="blog-date">1 أغسطس 2026</span><h4>5 أخطاء شائعة عند تفصيل المطابخ بالمتر</h4>
+          <span class="blog-read">اقرأ المزيد <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER CTA ================= -->
+<section class="section" style="padding-top:0;">
+  <div class="container" data-reveal>
+    <div class="news-cta">
+      <div>
+        <h3>عروض حصرية ونصائح مشاريع تصل بريدك أولاً</h3>
+        <p>سجّل الآن ولا تفوّت أي تحديث على منتجاتنا وعروضنا الجديدة.</p>
+      </div>
+      <form class="news-form">
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <button type="submit" class="btn btn-primary">اشتراك</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="logo-mark"><span></span><span></span><span></span><span></span></span> بصمة عامة</a>
+        <p>نقدّم حلولاً متكاملة للأرضيات والديكورات والتشطيبات بلمسة فنية فاخرة، لأصحاب المشاريع والمقاولين والمستشارين وعملاء التجزئة.</p>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> السعودية — جدة — حي الفيصلية</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span dir="ltr">0530 710 810</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg> info@basmah-aamah.com</li>
+        </ul>
+        <div class="social-row">
+          <a href="#" aria-label="انستقرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="تويتر"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="سناب شات"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 1 5 5v3c0 3 3 4 3 5s-2 1-2 1-1 3-3 3c-1 0-1.5.5-3 .5s-2-.5-3-.5c-2 0-2-3-3-3s-2 0-2-1 3-2 3-5V7a5 5 0 0 1 5-5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>مساعدة</h5>
+        <ul>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">الشروط والأحكام</a></li>
+          <li><a href="#">الأسئلة الشائعة</a></li>
+          <li><a href="#">شركاؤنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>معلومات عنا</h5>
+        <ul>
+          <li><a href="#">من نحن</a></li>
+          <li><a href="#">جميع المنتجات</a></li>
+          <li><a href="#">المدونة</a></li>
+          <li><a href="#">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>الأقسام</h5>
+        <ul>
+          <li><a href="#">أرضيات</a></li>
+          <li><a href="#">ديكورات</a></li>
+          <li><a href="#">مطابخ وخزائن</a></li>
+          <li><a href="#">ملاعب رياضية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 جميع الحقوق محفوظة لدى بصمة عامة</p>
+      <div class="pay-icons"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE STICKY BAR ================= -->
+<nav class="mobile-bar">
+  <div class="mobile-bar-grid">
+    <a href="tel:0530710810">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      اتصال
+    </a>
+    <a href="https://wa.me/966530710810" target="_blank" rel="noopener" class="wa-dot">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.8-.4-1.6-.9-2.3-1.5-.6-.6-1.2-1.3-1.6-2-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9 1-1 2.2-.1 3.6 1.7 2.6 3.1 4 5.9 5.1 2.1.8 2.6.6 3.1.5.7-.1 1.7-.7 1.9-1.4.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      واتساب
+    </a>
+    <a href="#" >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      السلة
+    </a>
+    <a href="#rep" class="primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      مندوب
+    </a>
+  </div>
+</nav>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  <span>تم استلام طلبك، سيتواصل معك مندوبنا قريباً</span>
+</div>
+
+<script>
+  // header shadow on scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // mobile drawer
+  const drawer = document.getElementById('drawer');
+  const burger = document.getElementById('burgerBtn');
+  const drawerClose = document.getElementById('drawerClose');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+  function openDrawer(){ drawer.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ drawer.classList.remove('open'); document.body.style.overflow=''; }
+  burger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  // product tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      document.querySelectorAll('.prod-panel').forEach(p => {
+        p.classList.toggle('active', p.dataset.panel === tab);
+      });
+    });
+  });
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // rep form fake submit
+  const repForm = document.getElementById('repForm');
+  const toast = document.getElementById('toast');
+  repForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    toast.classList.add('show');
+    repForm.reset();
+    setTimeout(() => toast.classList.remove('show'), 3600);
+  });
+
+  // hero carousel
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length) {
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    const total = slides.length;
+    let timer = setInterval(() => goToSlide(current + 1), 5000);
+
+    function goToSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + total) % total;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goToSlide(parseInt(dot.dataset.index));
+        clearInterval(timer);
+        timer = setInterval(() => goToSlide(current + 1), 5000);
+      });
+    });
+
+    const heroEl = document.querySelector('.hero');
+    heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+    heroEl.addEventListener('mouseleave', () => {
+      timer = setInterval(() => goToSlide(current + 1), 5000);
+    });
+  }
+
+  // newsletter fake submit
+  document.querySelector('.news-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    toast.querySelector('span').textContent = 'تم تسجيل بريدك بنجاح، شكراً لك';
+    toast.classList.add('show');
+    e.target.reset();
+    setTimeout(() => toast.classList.remove('show'), 3600);
+  });
+</script>
+</body>
+</html>
